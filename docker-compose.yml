@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: laravel-docker
-    container_name: lara_app
+    container_name: app_lara
     restart: unless-stopped
     tty: true
     environment:
@@ -53,7 +53,21 @@ services:
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
       - app-network
-
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: lara_phpmyadmin
+    environment:
+      PMA_PORT: 3306
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: denis
+    ports:
+      - "8004:80"
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - app-network
 #Redes
 networks:
   app-network:
