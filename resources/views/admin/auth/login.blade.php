@@ -23,6 +23,9 @@
             <div class="form-group">
                 <label class="control-label" for="email">Email Address</label>
                 <input class="form-control" type="email" id="email" name="email" placeholder="Email address" autofocus value="{{ old('email') }}">
+                @error('email')
+                <p>{{$errors->first('email')}}</p>
+                @enderror
             </div>
             <div class="form-group">
                 <label class="control-label" for="password">Password</label>

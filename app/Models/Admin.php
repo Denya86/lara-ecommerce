@@ -34,7 +34,7 @@ class Admin extends Authenticatable
 
     /**
      *
-     * Атрибуты, которые должны быть приведены к нативным типам.
+     * The attributes that should be cast to native types.
      *
      * @var array
      */
