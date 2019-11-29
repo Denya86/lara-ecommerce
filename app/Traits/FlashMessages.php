@@ -1,46 +1,37 @@
 <?php
-
 namespace App\Traits;
-
 /**
  * Trait FlashMessages
  * @package App\Traits
  */
 trait FlashMessages
 {
-
     /**
      * @var array
      */
     protected $errorMessages = [];
-
     /**
      * @var array
      */
     protected $infoMessages = [];
-
     /**
      * @var array
      */
     protected $successMessages = [];
-
     /**
      * @var array
      */
     protected $warningMessages = [];
-
     /**
      * @param $message
      * @param $type
      */
-    protected function setFlashMessage($message,$type)
+    protected function setFlashMessage($message, $type)
     {
-
         $model = 'infoMessages';
-
-        switch ($type){
-            case 'info' : {
-                $model = 'infoMessage';
+        switch ($type) {
+            case 'info': {
+                $model = 'infoMessages';
             }
                 break;
             case 'error': {
@@ -56,39 +47,35 @@ trait FlashMessages
             }
                 break;
         }
-
-        if(in_array($message)){
-            foreach ($message as $key=>$value)
+        if (is_array($message)) {
+            foreach ($message as $key => $value)
             {
-                array_push($this->$model,$value);
+                array_push($this->$model, $value);
             }
-        }else{
-            array_push($this->$model,$message);
+        } else {
+            array_push($this->$model, $message);
         }
     }
-
     /**
      * @return array
      */
-    protected function getFlashMessage()
+    protected function getFlashMessages()
     {
         return [
-            'error'   => $this->errorMessages,
-            'info'    => $this->infoMessages,
-            'success' => $this->successMessages,
-            'warning' => $this->warningMessages
+            'error'     =>  $this->errorMessages,
+            'info'      =>  $this->infoMessages,
+            'success'   =>  $this->successMessages,
+            'warning'   =>  $this->warningMessages,
         ];
     }
-
     /**
      * Flushing flash messages to Laravel's session
      */
-    protected function showFlashMessage()
+    protected function showFlashMessages()
     {
-        session()->flash('error',$this->errorMessages);
-        session()->flash('info',$this->infoMessages);
-        session()->flash('success',$this->successMessages);
-        session()->flash('warning',$this->warningMessages);
+        session()->flash('error', $this->errorMessages);
+        session()->flash('info', $this->infoMessages);
+        session()->flash('success', $this->successMessages);
+        session()->flash('warning', $this->warningMessages);
     }
-
 }

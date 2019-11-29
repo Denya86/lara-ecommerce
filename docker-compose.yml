@@ -63,7 +63,6 @@ services:
       PMA_PASSWORD: denis
     ports:
       - "8004:80"
-    restart: always
     depends_on:
       - db
     networks:
