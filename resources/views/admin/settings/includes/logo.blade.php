@@ -1,4 +1,3 @@
-<?php var_dump(config('settings.site_logo')) ?>
 <div class="tile">
     <form action="{{ route('admin.settings.update') }}" method="POST" role="form" enctype="multipart/form-data">
 @csrf
