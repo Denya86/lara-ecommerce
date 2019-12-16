@@ -18,9 +18,20 @@ class Brand extends Model
     protected $fillable = ['name','slug','logo'];
 
 
+    /**
+     * @param $value
+     */
     public function setNameAttribute($value)
     {
         $this->attributes['name'] = $value;
         $this->attributes['slug'] = Str::slug($value);
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function products(){
+
+        return $this->belongsTo(Product::class);
     }
 }
