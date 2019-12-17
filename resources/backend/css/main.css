@@ -188,6 +188,55 @@ address {
   background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
 }
 
+.btn-tertiary {
+  color: #fff;
+  font-size: 18px;
+  padding: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align:center;
+  width: 240px;
+  background-size: 300% 100%;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+.btn-tertiary:hover, .btn-tertiary:focus {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+}
+/* input file style */
+.input-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.input-file + .js-labelFile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.input-file + .js-labelFile .icon:before {
+  content: "\f093";
+}
+.input-file + .js-labelFile.has-file .icon:before {
+  content: "\f00c";
+}
+
+
 ol, ul, dl {
   margin-top: 0;
   margin-bottom: 1rem;

@@ -66,9 +66,14 @@
                                     @endif
                                 </div>
                                 <div class="col-md-10">
-                                    <label class="control-label">Category Image</label>
-                                    <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
-                                    @error('image') {{ $message }} @enderror
+                                    <div class="form-group">
+                                        <input type="file" id="image" name="image" class="input-file @error('image') is-invalid @enderror">
+                                        <label for="image" class=" btn-tertiary js-labelFile">
+                                            <i class="icon fa fa-check"></i>
+                                            <span class="js-fileName">Choose a file</span>
+                                            @error('image') {{ $message }} @enderror
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </div>

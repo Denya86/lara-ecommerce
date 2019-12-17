@@ -48,15 +48,18 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="control-label">Category Image</label>
-                            <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"/>
-                            @error('image') {{ $message }} @enderror
+                            <input type="file" id="image" name="image" class="input-file @error('image') is-invalid @enderror">
+                            <label for="image" class=" btn-tertiary js-labelFile">
+                                <i class="icon fa fa-check"></i>
+                                <span class="js-fileName">Choose a file</span>
+                                @error('image') {{ $message }} @enderror
+                            </label>
                         </div>
                     </div>
                     <div class="tile-footer">
-                        <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Category</button>
+                        <button class="btn-hover color-5" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save Category</button>
                         &nbsp;&nbsp;&nbsp;
-                        <a class="btn btn-secondary" href="{{ route('admin.categories.index') }}"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+                        <a class="btn-hover color-8" href="{{ route('admin.categories.index') }}"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
                     </div>
                 </form>
             </div>

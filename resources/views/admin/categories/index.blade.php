@@ -6,7 +6,7 @@
             <h1><i class="fa fa-tags"></i> {{ $pageTitle }}</h1>
             <p>{{ $subTitle }}</p>
         </div>
-        <a href="{{ route('admin.categories.create') }}" class="btn btn-primary pull-right">Add Category</a>
+        <a href="{{ route('admin.categories.create') }}" class="btn-hover color-5 pull-right">Add Category</a>
     </div>
     @include('admin.partials.flash')
     <div class="row">

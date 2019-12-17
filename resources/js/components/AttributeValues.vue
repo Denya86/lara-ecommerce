@@ -30,13 +30,13 @@
             <div class="tile-footer">
                 <div class="row d-print-none mt-2">
                     <div class="col-12 text-right">
-                        <button class="btn btn-success" type="submit" @click.stop="saveValue()" v-if="addValue">
+                        <button class="btn-hover color-5" type="submit" @click.stop="saveValue()" v-if="addValue">
                             <i class="fa fa-fw fa-lg fa-check-circle"></i>Save
                         </button>
-                        <button class="btn btn-success" type="submit" @click.stop="updateValue()" v-if="!addValue">
+                        <button class="btn-hover color-5" type="submit" @click.stop="updateValue()" v-if="!addValue">
                             <i class="fa fa-fw fa-lg fa-check-circle"></i>Update
                         </button>
-                        <button class="btn btn-primary" type="submit" @click.stop="reset()" v-if="!addValue">
+                        <button class="btn-hover color-11" type="submit" @click.stop="reset()" v-if="!addValue">
                             <i class="fa fa-fw fa-lg fa-check-circle"></i>Reset
                         </button>
                     </div>
@@ -62,10 +62,10 @@
                             <td style="width: 25%" class="text-center">{{ value.value}}</td>
                             <td style="width: 25%" class="text-center">{{ value.price}}</td>
                             <td style="width: 25%" class="text-center">
-                                <button class="btn btn-sm btn-primary" @click.stop="editAttributeValue(value)">
+                                <button class="edit" @click.stop="editAttributeValue(value)">
                                     <i class="fa fa-edit"></i>
                                 </button>
-                                <button class="btn btn-sm btn-danger" @click.stop="deleteAttributeValue(value)">
+                                <button class="delete" @click.stop="deleteAttributeValue(value)">
                                     <i class="fa fa-trash"></i>
                                 </button>
                             </td>
