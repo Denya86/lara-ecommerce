@@ -51,7 +51,7 @@ class Product extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function image()
+    public function images()
     {
         return $this->hasMany(ProductImage::class);
     }
