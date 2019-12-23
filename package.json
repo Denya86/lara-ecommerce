@@ -21,6 +21,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-      "vue-swal": "^0.1.0"
+        "vue-swal": "^0.1.0"
     }
 }

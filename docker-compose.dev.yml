@@ -27,8 +27,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8101:80"
-      - "8102:443"
+      - "8080:80"
     volumes:
       - ./:/var/www
       - ./nginx/conf.d/:/etc/nginx/conf.d/
@@ -42,10 +41,10 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "8103:3306"
+      - "3306:3306"
     environment:
       MYSQL_DATABASE: laravel_docker
-      MYSQL_ROOT_PASSWORD: denis
+      MYSQL_ROOT_PASSWORD: example
       SERVICE_TAGS: dev
       SERVICE_NAME: mysql
     volumes:
@@ -53,6 +52,8 @@ services:
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
       - app-network
+
+  #PHPmyAdmin
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: lara_phpmyadmin
@@ -60,7 +61,7 @@ services:
       PMA_PORT: 3306
       PMA_HOST: db
       PMA_USER: root
-      PMA_PASSWORD: denis
+      PMA_PASSWORD: example
     ports:
       - "8004:80"
     depends_on:
