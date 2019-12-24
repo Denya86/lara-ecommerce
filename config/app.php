@@ -1,6 +1,7 @@
 <?php
 
 
+use Harimayco\Menu\MenuServiceProvider;
 
 return [
 
@@ -178,6 +179,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         App\Providers\SettingServiceProvider::class,
         App\Providers\RepositoryServiceProvider::class,
+        App\Providers\ViewComposerServiceProvider::class
     ],
 
     /*

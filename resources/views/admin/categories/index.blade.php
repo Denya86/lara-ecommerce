@@ -33,7 +33,7 @@
                                     <td>{{ $category->id }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->slug }}</td>
-                                    <td>{{ $category->parent->name }}</td>
+                                    <td>{{ $category->parent_id }}</td>
                                     <td class="text-center">
                                         @if ($category->featured == 1)
                                             <span class="badge badge-success">Yes</span>
