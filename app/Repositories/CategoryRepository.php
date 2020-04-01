@@ -110,9 +110,10 @@ class CategoryRepository extends BaseRepository implements CategoryContract
         return Category::orderByRaw('-name ASC')
             ->get()
             ->nest()
-            ->setIndent('|–– ')
+            ->setIndent('|––')
             ->listsFlattened('name');
     }
+
     public function findBySlug($slug)
     {
         return Category::with('products')
