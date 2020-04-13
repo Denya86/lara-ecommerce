@@ -27,11 +27,11 @@
                                 <div class="form-row">
                                     <div class="col form-group">
                                         <label>First name</label>
-                                        <input type="text" class="form-control" name="first_name">
+                                        <input type="text" class="form-control" value="{{ auth()->user()->first_name }}" name="first_name">
                                     </div>
                                     <div class="col form-group">
                                         <label>Last name</label>
-                                        <input type="text" class="form-control" name="last_name">
+                                        <input type="text" class="form-control" value="{{ auth()->user()->last_name }}" name="last_name">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -85,6 +85,7 @@
                                     </article>
                                 </div>
                             </div>
+                            </div>
                             <div class="col-md-12 mt-4">
                                 <button type="submit" class="subscribe btn btn-success btn-lg btn-block">Place Order</button>
                             </div>
@@ -95,3 +96,4 @@
         </div>
     </section>
 @stop
+

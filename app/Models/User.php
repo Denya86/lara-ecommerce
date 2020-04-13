@@ -44,4 +44,12 @@ class User extends Authenticatable
     {
         return $this->first_name .' '.$this->last_name;
     }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

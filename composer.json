@@ -14,6 +14,8 @@
         "laravel/framework": "^6.2",
         "laravel/helpers": "^1.1",
         "laravel/tinker": "^1.0",
+        "paypal/rest-api-sdk-php": "*",
+        "stripe/stripe-php": "^7.28",
         "typicms/nestablecollection": "^1.1"
     },
     "require-dev": {
