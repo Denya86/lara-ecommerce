@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Database\Seeder;
 use App\Models\AttributeValue;
+use Illuminate\Database\Seeder;
 
 class AttributeValuesTableSeeder extends Seeder
 {
@@ -32,6 +32,5 @@ class AttributeValuesTableSeeder extends Seeder
                 'price'             =>  null,
             ]);
         }
-
     }
 }

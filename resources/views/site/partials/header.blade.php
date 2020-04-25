@@ -5,7 +5,12 @@
                 <div class="col-lg-3">
                     <div class="brand-wrap">
                         <a href="{{ url('/') }}">
-                            <img class="logo" src="{{ asset('frontend/images/logo-dark.png') }}" alt="logo">
+                            @if (config('settings.site_logo') != null)
+                                <img src="{{ asset('storage/'.config('settings.site_logo')) }}">
+                            @else
+                                <img class="logo" src="{{ asset('frontend/images/logo-dark.png') }}" alt="logo">
+                            @endif
+
                         </a>
                     </div>
                 </div>
